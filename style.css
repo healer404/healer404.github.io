@@ -1,0 +1,450 @@
+*{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: Roboto, sans-serif;
+    background: radial-gradient(circle at bottom,
+        rgba(255,255,255, 0.9),
+        rgba(250, 250, 250, 0.5),
+        rgba(0,0,0,0.1),
+        rgba(0,0,0,0.3),
+        rgba(0,0,0,0.5),
+        rgba(0,0,0,0.7),
+        rgba(0,0,0,0.9),
+        rgba(0,0,0,1)
+    );
+}
+
+.bg-dark{
+    background-color: #000;
+}
+
+.container{
+    margin: 0 5vw;
+}
+.row{
+    display: block;
+    width: 100%;
+}
+.section{
+    height: 100vh;
+    width: 100%;
+}
+.dsktp-blncr{
+    display: none;
+    user-select: none;
+}
+
+.content-header{
+    color: lightgray;
+    width: 100%;
+}
+.content-header-intro{
+    font-size: 1.2rem;
+    font-weight: 300;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+}
+.content-header-title{
+    font-size: 2.2rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    color: snow;
+}
+.content-header-subtext{
+    padding-top: 5px;
+    margin-bottom: 4vh;
+    font-size: 1rem;
+    white-space: normal;
+    word-wrap: break-word;
+}
+
+.btn{
+    text-decoration: none;
+    color: lightgray;
+    padding: 10px 15px;
+    background: none;
+    font-size: 1rem;
+    cursor: pointer;
+}
+.btn:hover, .btn:focus{
+    opacity: 0.8;
+    transition: 300ms;
+    outline: none;
+}
+.btn-primary{
+    border: 1px solid lightgray;
+    color: snow;
+}
+.btn-primary:hover, .btn-primary:focus{
+    transition: 300ms;
+    background: snow;
+    color: #000;
+}
+
+@media only screen and (min-width: 45.856rem) {
+    .dsktp-blncr{
+        display: block;
+        width: 100%;
+    }
+    .row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}
+
+/** CSS Parts **/
+.header{
+    position: fixed;
+    width: 100%;
+    height: 10vh;
+    z-index: 9999;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.nav a{
+    text-decoration: none;
+}
+.nav .nav-banner{
+    width: 100%;
+}
+.nav .nav-banner a img{
+    height: 10vh;
+}
+.nav-links{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+.nav-link{
+    padding: 10px 15px;
+    color: lightgray;
+    outline: none;
+    border-bottom: 1px solid transparent;
+}
+.nav-link:hover, .nav-link:focus, .nav-link.active{
+    transition: 1s ease-in;
+    border-bottom: 1px solid lightgray;
+}
+@media only screen and (max-width: 45.856rem) {
+    .nav-banner{
+        width: 100vw;
+        height: 10vh;
+        text-align: center;
+    }
+    .nav-links{
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        height: 6vh;
+        width: 100vw;
+        justify-content: space-between;
+        align-items: center;
+        background: rgba(0,0,0,1);
+        box-shadow: 1px -1px 2px rgba(255, 255, 255, 0.8);
+        z-index: 9999;
+    }
+    .nav-link{
+        text-align: center;
+        width: 100%;
+        margin: 0;
+    }
+    .nav-link:hover, .nav-link:focus, .nav-link.active{
+        border-bottom: 1px solid transparent;
+        background: rgba(0,0,0,0.7);
+        transition: 100ms;
+    }
+}
+
+.welcome-section{
+    background-image: url("./background.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition: 300ms all ease-in;
+}
+.welcome-section.go-right{
+    transition: 1s;
+    margin-left: -100vw;
+}
+.welcome-content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.aboutMe-section{
+    height: auto;
+    background: rgba(0,0,0,0.8);
+}
+.aboutMe-content{
+    padding-top: 5vh;
+    padding-bottom: 5vh;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: start;
+}
+.aboutMe-image{
+    height: 80vh;
+}
+.aboutMe-image img{
+    height: 100%;
+    user-select: none;
+    box-shadow: -10px 10px 2px rgba(250,250,250,.4);
+}
+.aboutMe-skill{
+    width: 100%;
+    background: rgba(0,0,0,1);
+    border: 1px solid rgba(255,255,255,0.2);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 2px;
+}
+.aboutMe-skill-level{
+    background: linear-gradient(to right,
+    rgba(255,255,255,0.7),
+    rgba(255,255,255,0.6),
+    rgba(255,255,255,0.5),
+    rgba(255,255,255,0.4)
+    );
+    padding: 9px 0;
+}
+.aboutMe-skill-name{
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: center;
+    color: black;
+    padding:9px;
+}
+.aboutMe-skill-percent{
+    padding-right: 5px;
+}
+@media only screen and (max-width: 45.856rem) {
+    .aboutMe-content{
+        display: block;
+        text-align: center;
+    }
+    .aboutMe-image img{
+        width: 100%;
+    }
+    .aboutMe-info{
+        margin-left: 0;
+        margin-top: 5vh;
+        margin-bottom: 5vh;
+        text-align: start;
+    }
+}
+
+.works-section{
+    min-height: 100vh;
+    background: linear-gradient(to top,
+    rgba(0,0,0,.9),
+    rgba(0,0,0,.9),
+    rgba(0,0,0,.8),
+    rgba(0,0,0,.8),
+    rgba(0,0,0,.9),
+    rgba(0,0,0,.9)
+    );
+    height: auto;
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+}
+.work-item-list{
+    display: block;
+    justify-content: center;
+}
+.work-item {
+    width: 302px;
+    height: 302px;
+    margin: 5px;
+    float: left;
+    cursor: pointer;
+}
+
+.work-item-front img {
+    width: 300px;
+}
+
+.work-item-back h2 {
+    position: absolute;
+    border-bottom: 1px solid lightgray;
+    width: 93%;
+}
+
+.work-item-back p {
+    position: absolute;
+    top: 50px;
+    font-size: 15px;
+    width: 93%;
+    font-weight: 300;
+}
+
+.work-item-front h2{
+    position: absolute;
+    padding: 10px 0;
+    top: 190px;
+    left: 10px;
+    width: 93%;
+    color: lightgray;
+    border-bottom: 1px solid lightgray;
+}
+.work-item-front h5{
+    position: absolute;
+    bottom: 1px;
+    left: 10px;
+    font-weight: 500;
+}
+.work-item > .work-item-front
+{
+    position: absolute;
+    transform: perspective(600px) rotateY(0deg);
+    width: 302px;
+    height: 302px;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+    background: #000000;
+    color: lightgray;
+    box-shadow: -2px 2px 2px rgba(250,250,250,0.3);
+}
+.work-item > .work-item-back
+{
+    position: absolute;
+    transform: perspective(600px) rotateY(180deg);
+    background: #262626;
+    color: lightgray;
+    width: 302px;
+    height: 302px;
+    padding: 10px;
+    word-break: break-word;
+    backface-visibility: hidden;
+    transition: transform .5s linear 0s;
+    box-shadow: -2px 2px 2px rgba(250,250,250,0.3);
+}
+.work-item:hover > .work-item-front
+{
+    transform: perspective(600px) rotateY(-180deg);
+}
+
+.work-item:hover > .work-item-back {
+    transform: perspective(600px) rotateY(0deg);
+}
+
+.footer{
+    text-align: center;
+    height: 20vh;
+    background: #000000;
+    box-shadow: 1px -1px 1px rgba(255,255,255,0.4);
+    color: gray;
+}
+.profile-links a{
+    text-decoration: none;
+    color: snow;
+    font-size: 3rem;
+    background: #000000;
+}
+.profile-links a:hover, .profile-links a:focus{
+    transition: 300ms;
+    opacity: 0.9;
+}
+
+.aboutMe-overview{
+    width: 100%;
+    margin: 0;
+    padding: 10vh 0;
+    background-color: lightgray;
+    display: flex;
+    flex-direction: row;
+}
+.aboutMe-overview-item{
+    width: 100%;
+    text-align: center;
+}
+.aboutMe-overview-item-icon i{
+    font-size: 2.5rem;
+    padding: 15px;
+    border-radius: 50%;
+    background: snow;
+    color: dimgray;
+}
+.aboutMe-overview-item-title{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.aboutMe-overview-item-description{
+    font-weight: 300;
+    font-size: 1rem;
+    padding: 5px;
+}
+@media only screen and (max-width: 45.856rem){
+    .aboutMe-overview{
+        flex-wrap: wrap;
+    }
+    .aboutMe-overview-item{
+        margin-bottom: 5px;
+    }
+}
+
+/** Animations **/
+@keyframes slide-in {
+    0%{
+        margin-left: -50vw;
+    }
+    80%{
+        margin-top: 0;
+    }
+}
+@keyframes fade-in {
+    0%{
+        transform: scale(0,.025);
+    }
+    80%{
+        transform: scale(1,.025);
+    }
+}
+@keyframes load-in {
+    0%{
+        width: 0;
+    }
+    10%{
+        width: 10%;
+    }
+    20%{
+        width: 20%;
+    }
+    30%{
+        width: 30%;
+    }
+    40%{
+        width: 40%;
+    }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .slide{
+        animation-name: slide-in;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+    .fade{
+        animation-name: fade-in;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+    .load{
+        animation-name: load-in;
+        animation-duration: 1s;
+        animation-iteration-count: 1;
+    }
+}
+
+
+
