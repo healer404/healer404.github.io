@@ -65,7 +65,8 @@ body{
 .ads-section{
     position: relative;
     bottom: 0;
-    display: flex;
+/*     display: flex; */
+    display:none;
     justify-content: center;
     align-items: center;
 }
@@ -145,7 +146,8 @@ body{
 }
 @media screen and (min-width: 45.856rem){
     .dsktp-ads{
-        display: flex;
+/*         display: flex; */
+        display: none;
     }
     .ads-holder{
         width: 728px;
