@@ -4,7 +4,7 @@ import RefObserver from "./inc.observer";
 const Introduction = () => {
   const refIntro = useRef(null);
   return (
-    <section className="PRTFsection" ref={refIntro}>
+    <section className="PRTFsection" ref={refIntro} id="introduction">
       <main className={RefObserver(refIntro) ? "introContainer active" : "introContainer"}>
         <div className="texts">
           <span className="greeting">

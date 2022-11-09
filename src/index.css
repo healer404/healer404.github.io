@@ -24,6 +24,9 @@
     --nrm-padding: 15px;
   }
 }
+*{
+  scroll-behavior: smooth;
+}
 body{
   margin: 0 !important;
   padding: 0 !important;

@@ -31,7 +31,8 @@ const Projects = () => {
       {SectionHeader({
         title: "Projects", 
         subtitle: "Here are some of my", 
-        ref: RefObserver(refProjects)
+        ref: RefObserver(refProjects),
+        id: "projects"
       })}
 
       <main className={RefObserver(refProjects) ? "projectContainer active" : "projectContainer"}>

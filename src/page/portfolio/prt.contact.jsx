@@ -62,7 +62,8 @@ const ContactMe = () => {
       {SectionHeader({
         title: "Contact Me",
         subtitle: "Let's create something",
-        ref: RefObserver(refContactMe)
+        ref: RefObserver(refContactMe),
+        id: "contact"
       })}
       <main className={refContactMe ? "contactContainer active" : "contactContainer"}>
         <form className="contactForm" onSubmit={handleSubmit}>

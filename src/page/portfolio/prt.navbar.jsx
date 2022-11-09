@@ -5,11 +5,11 @@ const Navbar = () => {
   const refNavbar = useRef(null);
   return (
     <nav className={RefObserver(refNavbar) ? "PRTFnavbar active" : "PRTFnavbar"} ref={refNavbar}>
-      <a href="#" className="item">
+      <a href="#introduction" className="item">
         <i className="fas fa-file"></i>
         <span>Resume</span>
       </a>
-      <a href="#" className="item">
+      <a href="#about" className="item">
         <i className="fas fa-user"></i> 
         <span>About Me</span>
       </a>
@@ -17,11 +17,11 @@ const Navbar = () => {
         <img src="./assets/happs.png" alt="happs" />
         <span>Home</span>
       </a>
-      <a href="#" className="item">
+      <a href="#contact" className="item">
         <i className="fas fa-phone"></i>
         <span>Contact</span>
       </a>
-      <a href="#" className="item">
+      <a href="#projects" className="item">
         <i className="fas fa-folder"></i>
         <span>Projects</span>
       </a>
