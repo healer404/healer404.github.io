@@ -70,7 +70,7 @@ const ContactMe = () => {
           <p className='contact-warning'>
             <i className="fas fa-exclamation"></i>
             <span className='ml-10'>
-              Please provide valid information.
+              &nbsp; Please provide valid information.
             </span>
           </p> : null}
 
@@ -78,7 +78,7 @@ const ContactMe = () => {
           <p className='contact-warning'>
             <i className='fas fa-check'></i>
             <span className='ml-10'>
-              Message Sent. 
+              &nbsp; Message Sent. 
             </span>
           </p> : null}
           <input type="text" placeholder="Name" name="senderName" id="senderName" required />

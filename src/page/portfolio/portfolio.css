@@ -563,6 +563,12 @@ body{
 .contactContainer.active > .contactOptions > a:nth-child(5){
   animation-delay: 900ms;
 }
+
+.contactContainer > .contactForm > .contact-warning{
+  text-align: center;
+  color: var(--clr-gray);
+  gap: var(--nrm-padding);
+}
 @media screen and (min-width: 46.856rem){
   .contactContainer{
     display: flex;
