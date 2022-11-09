@@ -10,7 +10,8 @@ const AboutMe = () => {
       {SectionHeader({
         title: "About Me", 
         subtitle: "Let me tell you something", 
-        ref: RefObserver(refAboutMe)
+        ref: RefObserver(refAboutMe),
+        id: "about"
       })}
 
       <article className={RefObserver(refAboutMe) ? "aboutSummary active" : "aboutSummary"}>
