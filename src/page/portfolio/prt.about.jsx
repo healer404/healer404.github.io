@@ -92,7 +92,7 @@ const AboutMe = () => {
           <li className="one">
             <span>Entry</span>
             <i className="fab fa-laravel fa-lg"></i>
-            <p>PHP</p>
+            <p>Laravel</p>
           </li>
           <li className="two">
             <span>Intermediate</span>

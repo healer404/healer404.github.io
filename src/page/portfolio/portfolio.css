@@ -338,9 +338,11 @@ body{
 }
 .aboutSkills > li > span {
   text-transform: capitalize;
-  font-size: .7rem;
-  color: var(--clr-gray);
+  font-size: .6rem;
+  font-weight: 300;
+  color: var(--clr-white);
   letter-spacing: 1px;
+  opacity: .7;
 }
 .aboutSkills > li > p{
   margin: 0;
@@ -379,6 +381,9 @@ body{
   .aboutSkills{
     flex: 8;
     grid-template-areas: "one two three four";
+  }
+  .aboutSkills > li > span {
+    font-size: .8rem;
   }
 }
 
