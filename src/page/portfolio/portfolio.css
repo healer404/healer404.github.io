@@ -567,7 +567,7 @@ body{
   .contactContainer{
     display: flex;
     flex-direction: row-reverse;
-    padding: 10vh 20vw 5vh 20vw;
+    padding: 10vh 20vw;
   }
   .contactForm,
   .contactForm:focus,
