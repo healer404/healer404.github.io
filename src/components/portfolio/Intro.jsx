@@ -6,23 +6,24 @@ class Intro extends Component{
     visibility: false,
   }
   render(){
+    const {introData} = this.props;
     return (
       <ReactVisibilitySensor onChange={(isVisible) => {
         this.setState({visibility: isVisible})
       }}>
-        <section className="PRTFsection" id="introduction">
+        <section className="PRTFsection" id={introData.id}>
           <main className={this.state.visibility ? "introContainer active" : "introContainer"}>
             <div className="texts">
               <span className="greeting">
-                Hello, my name is
+                {introData.greeting}
               </span>
               <h1 className="name">
-                Roniel Duka
+              {introData.name}
               </h1>
-              <span className="position">Junior developer</span>
+              <span className="position">{introData.position}</span>
             </div>
             <div className="buttons">
-              <a href="" className="btn-primary" target="_blank" rel="noreferrer">
+              <a href={introData.cvlink} className="btn-primary" target="_blank" rel="noreferrer">
                 Download CV
               </a>
               <a href="" className="btn-secondary" target="_blank" rel="noreferrer">
