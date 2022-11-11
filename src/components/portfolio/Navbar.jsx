@@ -1,15 +1,10 @@
 import { Component } from "react";
-import ReactVisibilitySensor from "react-visibility-sensor";
-
 class Navbar extends Component{
   state = {
     visibility: false,
   }
   render(){
     return (
-      <ReactVisibilitySensor onChange={(isVisible) => {
-        this.setState({visibility: isVisible});
-      }}>
         <nav className={this.state.visibility ? "PRTFnavbar active" : "PRTFnavbar"}>
           <a href="#introduction" className="item">
             <i className="fas fa-file"></i>
@@ -32,7 +27,6 @@ class Navbar extends Component{
             <span>Projects</span>
           </a>
         </nav>
-      </ReactVisibilitySensor>
     )
   }
 }

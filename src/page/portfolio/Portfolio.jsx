@@ -1,4 +1,5 @@
 import { Component } from "react";
+import TrackVisibility from "react-on-screen";
 import './portfolio.css';
 
 import Intro from "../../components/portfolio/Intro";
@@ -19,7 +20,9 @@ class PortfolioPage extends Component{
   render(){
     return (
       <>
-        <Intro introData={this.state.intro} />
+        <TrackVisibility once>
+          <Intro introData={this.state.intro} isVisible="true" />
+        </TrackVisibility>
         <Navbar />
       </>
     )
