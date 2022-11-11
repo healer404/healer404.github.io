@@ -4,6 +4,7 @@ import './portfolio.css';
 
 import Intro from "../../components/portfolio/Intro";
 import Navbar from "../../components/portfolio/Navbar";
+import Projects from "../../components/portfolio/Projects";
 class PortfolioPage extends Component{
   constructor(props){
     super(props);
@@ -22,6 +23,10 @@ class PortfolioPage extends Component{
       <>
         <TrackVisibility once>
           <Intro introData={this.state.intro} isVisible="true" />
+        </TrackVisibility>
+        
+        <TrackVisibility once>
+          <Projects projectsVisible="true" />
         </TrackVisibility>
         <Navbar />
       </>
