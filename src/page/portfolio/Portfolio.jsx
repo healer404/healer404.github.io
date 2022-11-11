@@ -11,7 +11,7 @@ class PortfolioPage extends Component{
         id: 'introduction',
         greeting: 'Hello, my name is',
         name: 'Roniel Duka',
-        position: 'Junior developer',
+        position: 'Junior Developer',
         cvlink: ''
       },
     }
