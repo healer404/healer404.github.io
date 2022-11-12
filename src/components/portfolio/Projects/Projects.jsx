@@ -16,7 +16,7 @@ class Projects extends Component{
     }
   }
   render(){
-    const {isVisible} = this.props;
+
     return(
       <section className="PRTFsection">
         <TrackVisibility once>

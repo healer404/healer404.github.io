@@ -407,7 +407,6 @@ body{
   display: flex;
   flex-direction: column;
   padding: var(--nrm-padding);
-  opacity: 0;
 }
 
 .projectCards > .card > .card-wrapper{
@@ -445,7 +444,6 @@ body{
 
 .projectContainer.active > .projectCards > .card{
   animation-name: slide-in;
-  opacity: 1;
 }
 .projectContainer.active > .projectCards > .card:nth-child(odd){
   animation-duration: 400ms;
