@@ -1,38 +1,23 @@
 import { Component } from "react";
-import TrackVisibility from "react-on-screen";
 import './portfolio.css';
 
-import Intro from "../../components/portfolio/Intro";
+import Intro from "../../components/portfolio/Introduction/Intro";
 import Navbar from "../../components/portfolio/Navbar";
 import AboutMe from "../../components/portfolio/About";
 import Projects from "../../components/portfolio/Projects";
 class PortfolioPage extends Component{
-  constructor(){
-    super();
-    this.state = {
-      intro: {
-        id: 'introduction',
-        greeting: 'Hello, my name is',
-        name: 'Roniel Duka',
-        position: 'Junior Developer',
-        cvlink: ''
-      },
-    }
-  }
   render(){
     return (
       <>
-        <TrackVisibility once>
-          <Intro introData={this.state.intro} />
-        </TrackVisibility>
+        <Intro />
         
-        <TrackVisibility once>
+        {/* <TrackVisibility once>
           <AboutMe />
         </TrackVisibility>
 
         <TrackVisibility once>
           <Projects projectsVisible="true" />
-        </TrackVisibility>
+        </TrackVisibility> */}
         <Navbar />
       </>
     )
