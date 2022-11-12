@@ -1,6 +1,9 @@
 import { Component } from "react";
 
 class SectionHeader extends Component{
+  constructor(props){
+    super(props);
+  }
   render(){
     const {headerDetails} = this.props;
     const {isProjectHeaderInView} = this.props;

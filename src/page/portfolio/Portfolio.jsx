@@ -4,10 +4,11 @@ import './portfolio.css';
 
 import Intro from "../../components/portfolio/Intro";
 import Navbar from "../../components/portfolio/Navbar";
+import AboutMe from "../../components/portfolio/About";
 import Projects from "../../components/portfolio/Projects";
 class PortfolioPage extends Component{
-  constructor(props){
-    super(props);
+  constructor(){
+    super();
     this.state = {
       intro: {
         id: 'introduction',
@@ -22,9 +23,13 @@ class PortfolioPage extends Component{
     return (
       <>
         <TrackVisibility once>
-          <Intro introData={this.state.intro} isVisible="true" />
+          <Intro introData={this.state.intro} />
         </TrackVisibility>
         
+        <TrackVisibility once>
+          <AboutMe />
+        </TrackVisibility>
+
         <TrackVisibility once>
           <Projects projectsVisible="true" />
         </TrackVisibility>
