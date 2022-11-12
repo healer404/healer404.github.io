@@ -1,21 +1,18 @@
 import { Component } from "react";
 import './portfolio.css';
 
-import Introduction from "./prt.intro";
-import ContactMe  from "./prt.contact";
-import Navbar from "./prt.navbar";
-import AboutMe from "./prt.about";
-import Projects from "./prt.projects";
-
+import Intro from "../../components/portfolio/Introduction/Intro";
+import Navbar from "../../components/portfolio/Navbar";
+import AboutMe from "../../components/portfolio/About/About";
+import Projects from "../../components/portfolio/Projects/Projects";
 class PortfolioPage extends Component{
   render(){
     return (
       <>
-        <Introduction />
-        <Navbar />
+        <Intro />
         <AboutMe />
         <Projects />
-        <ContactMe />
+        <Navbar />
       </>
     )
   }

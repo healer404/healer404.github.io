@@ -197,9 +197,11 @@ body{
 }
 .PRTFheader > .boxes.active > .box.left{
   left: 0;
+  transition: var(--transition);
 }
 .PRTFheader > .boxes.active > .box.right{
   right: 0;
+  transition: var(--transition);
 }
 
 /***** ABOUT *****/
@@ -386,6 +388,16 @@ body{
     font-size: .8rem;
   }
 }
+@media screen and (min-width: 768px){
+  .aboutSkills{
+    grid-template-areas: "one two three";
+  }
+}
+@media screen and (max-width: 280px){
+  .aboutSkills{
+    grid-template-areas: "one two";
+  }
+}
 
 /***** PROJECTS *****/
 .projectContainer{
@@ -405,7 +417,6 @@ body{
   display: flex;
   flex-direction: column;
   padding: var(--nrm-padding);
-  opacity: 0;
 }
 
 .projectCards > .card > .card-wrapper{
@@ -443,7 +454,6 @@ body{
 
 .projectContainer.active > .projectCards > .card{
   animation-name: slide-in;
-  opacity: 1;
 }
 .projectContainer.active > .projectCards > .card:nth-child(odd){
   animation-duration: 400ms;
@@ -451,6 +461,7 @@ body{
 .projectContainer.active > .projectCards > .card:nth-child(even){
   animation-duration: 600ms;
 }
+
 @media screen and (min-width: 46.856rem){
   .projectContainer{
     overflow: hidden;
@@ -464,10 +475,19 @@ body{
     margin-inline: auto;
   }
   .projectCards > .card{
-    width: 350px;
+    width: 320px;
     padding: 5px;
   }
 }
+@media screen and (max-width: 820px){
+  .projectCards{
+    grid-template-areas: 'item item';
+  }
+  .projectCards > .card{
+    width: 300px;
+  }
+}
+
 
 /***** CONTACT *****/
 .contactContainer{
