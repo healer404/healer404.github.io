@@ -197,9 +197,11 @@ body{
 }
 .PRTFheader > .boxes.active > .box.left{
   left: 0;
+  transition: var(--transition);
 }
 .PRTFheader > .boxes.active > .box.right{
   right: 0;
+  transition: var(--transition);
 }
 
 /***** ABOUT *****/

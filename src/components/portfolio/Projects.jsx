@@ -1,9 +1,16 @@
 import { Component } from "react";
+
+import SectionHeader from "./Header";
 import ProjectItem from "./ProjectItem";
 
 class Projects extends Component{
   render(){
     const {projectsVisible} = this.props;
+    const headerData = {
+      id: 'projects',
+      title: 'Projects',
+      subtitle: 'Here are some of my'
+    };
     const data = [
       {
         isBgWhole: false,
@@ -44,6 +51,7 @@ class Projects extends Component{
     ];
     return(
       <section className="PRTFsection">
+        <SectionHeader headerDetails={headerData} isProjectHeaderInView={projectsVisible} />
         <main className={projectsVisible ? "projectContainer active" : "projectContainer"}>
           <div className="projectCards">
             {data.map((projectItem, index) => (
