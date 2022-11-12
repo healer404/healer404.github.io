@@ -17,7 +17,7 @@ class Intro extends Component{
   render(){
     return (
       <TrackVisibility once tag="section" className="PRTFsection" id="introduction">
-        <IntroContent introData={this.state.intro}/> 
+        <IntroContent introData={this.state.intro} /> 
       </TrackVisibility> 
     )
   }
