@@ -1,6 +1,7 @@
 import { Component } from "react";
-import SkillIcon from "./SkillIcon";
-class AboutDescription extends Component{
+import SkillIcon from './SkillIcon';
+
+class AboutDetails extends Component{
   render(){
     const {isVisible} = this.props;
     const skills = [
@@ -65,8 +66,8 @@ class AboutDescription extends Component{
         label: 'UI design'
       }      
     ];
-    return (
-      <>
+    return(
+      <main className="aboutDescriptionContent">
         <article className={isVisible ? "aboutDescription active" : "aboutDescription"}>
           <picture>
             <img src="https://avatars.githubusercontent.com/u/47404070?v=4" alt="Roniel Duka Photo" loading="lazy"/>
@@ -91,13 +92,13 @@ class AboutDescription extends Component{
           </div>
         </article>
 
-        <ul className={isVisible ? "aboutSkills active" : "aboutSkills"}>
+        <ul className="aboutSkills active">
           {skills.map((skillItem, index) => (
             <SkillIcon skillItem={skillItem} key={index} />
           ))}
-        </ul>
-      </>
+        </ul>        
+      </main>
     )
   }
 }
-export default AboutDescription;
+export default AboutDetails;

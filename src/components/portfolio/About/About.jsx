@@ -3,7 +3,7 @@ import TrackVisibility from "react-on-screen";
 
 import SectionHeader from "../Header";
 import AboutSummary from "./Summary";
-import AboutDescription from "./Description";
+import AboutDetails from "./Details";
 
 class AboutMe extends Component{
   constructor(props){
@@ -27,10 +27,10 @@ class AboutMe extends Component{
           <AboutSummary />
         </TrackVisibility>
 
-        <TrackVisibility once tag="main" className="aboutDescriptionContent">
-          <AboutDescription />
+        <TrackVisibility once>
+          <AboutDetails />
         </TrackVisibility>
-
+        
       </section>
     )
   }
