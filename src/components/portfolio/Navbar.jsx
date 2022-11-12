@@ -1,11 +1,9 @@
 import { Component } from "react";
 class Navbar extends Component{
-  state = {
-    visibility: false,
-  }
   render(){
+    const {isVisible} = this.props;
     return (
-        <nav className={this.state.visibility ? "PRTFnavbar active" : "PRTFnavbar"}>
+        <nav className={isVisible ? "PRTFnavbar active" : "PRTFnavbar"}>
           <a href="#introduction" className="item">
             <i className="fas fa-file"></i>
             <span>Resume</span>

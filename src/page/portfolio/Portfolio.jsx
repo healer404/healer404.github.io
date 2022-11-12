@@ -12,7 +12,6 @@ class PortfolioPage extends Component{
         <Intro />
         <AboutMe />
         <Projects />
-        
         <Navbar />
       </>
     )
