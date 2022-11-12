@@ -26,7 +26,6 @@ class AboutSummary extends Component{
         description: 'Putting all efforts into producing good quality work on time.'
       }
     ];
-    console.log(data)
     return(
       <article className={isVisible ? "aboutSummary active" : "aboutSummary"}>
         {data.map((summaryItemDetails, index) => (
