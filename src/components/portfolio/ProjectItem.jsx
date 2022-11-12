@@ -3,7 +3,6 @@ import { Component } from "react";
 class ProjectItem extends Component{
   render(){
     const {itemDetails} = this.props;
-
     return (
       <article className="card">
         <div className="card-wrapper">
