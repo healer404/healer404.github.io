@@ -2,6 +2,10 @@ import { useRef } from "react";
 import Observer from "../../../hooks/observer";
 import SectionHeader from "../misc/header";
 import SummaryItem from "./summaryItems";
+import Description from "./description";
+import SkillItem from "./skills";
+
+import './about.css';
 
 const AboutMe = () => {
   const refAboutMe = useRef(null);
@@ -35,6 +39,68 @@ const AboutMe = () => {
       details: 'Putting all efforts into producing good quality work on time.'
     }
   ];
+  const skillDetails = [
+    {
+      type: 2,
+      icon: 'fab fa-html5',
+      label: 'html'
+    },
+    {
+      type: 2,
+      icon: 'fab fa-css3',
+      label: 'css' 
+    },
+    {
+      type: 2,
+      icon: 'fab fa-php',
+      label: 'php'
+    },
+    {
+      type: 2,
+      icon: 'fas fa-database',
+      label: 'mysql'
+    },
+    {
+      type: 1,
+      icon: 'fab fa-laravel',
+      label: 'laravel'
+    },
+    {
+      type: 1,
+      icon: 'fab fa-js',
+      label: 'js'
+    },
+    {
+      type: 1,
+      icon: 'fab fa-envira icon-rotate',
+      label: 'mongodb'
+    },
+    {
+      type: 1,
+      icon: 'fab fa-react',
+      label: 'react'
+    },
+    {
+      type: 2,
+      icon: 'fab fa-node',
+      label: 'node'
+    },
+    {
+      type: 2,
+      icon: 'fab fa-git',
+      label: 'git'
+    },
+    {
+      type: 1,
+      icon: 'fab fa-java',
+      label: 'java'
+    },
+    {
+      type: 1,
+      icon: 'fas fa-pencil-ruler',
+      label: 'ui design'
+    }
+  ];
   return (    
     <section className="PRTFsection" ref={refAboutMe}>
       <SectionHeader header={headerDetails} />
@@ -44,93 +110,14 @@ const AboutMe = () => {
           <SummaryItem items={summaryItem} key={index} />
         ))}
       </article>
-      <main className="aboutDescriptionContent">
-        <article className={Observer(refAboutDesc) ? "aboutDescription active" : "aboutDescription"} ref={refAboutDesc}>
-          <picture>
-            <img src="https://avatars.githubusercontent.com/u/47404070?v=4" alt="Roniel Duka Photo" loading="lazy"/>
-          </picture>
-          <div className="description">
-            <span>Who am I?</span>
-            <p>I am a graduate of computer engineering that loves exploring and 
-              learning new things, especially when it comes to programming. I 
-              am passionate about creating websites and web applications with 
-              dynamic user interfaces.</p>
-            <ul>
-              <li>
-                <a href=""><i className="fab fa-facebook fa-lg"></i></a>
-              </li>
-              <li>
-                <a href=""><i className="fab fa-twitter fa-lg"></i></a>
-              </li>
-              <li>
-                <a href=""><i className="fab fa-linkedin fa-lg"></i></a>
-              </li>
-            </ul>   
-          </div>
-        </article>
+      <main className="aboutDescriptionContent" ref={refAboutDesc}>
+        <Description isInView={Observer(refAboutDesc)} />
 
-        {/* <ul className={RefObserver(refAboutDesc) ? "aboutSkills active" : "aboutSkills"}>
-          <li className="two">
-            <span>Intermediate</span>
-            <i className="fab fa-html5 fa-lg"></i>
-            <p>HTML</p>
-          </li>
-          <li className="two">
-            <span>Intermediate</span>
-            <i className="fab fa-css3 fa-lg"></i>
-            <p>css</p>
-          </li>
-          <li className="two">
-            <span>Intermediate</span>
-            <i className="fab fa-php fa-lg"></i>
-            <p>PHP</p>
-          </li>
-          <li className="two">
-            <span>Intermediate</span>
-            <i className="fas fa-database fa-lg"></i>
-            <p>Mysql</p>
-          </li>
-          <li className="one">
-            <span>Entry</span>
-            <i className="fab fa-laravel fa-lg"></i>
-            <p>Laravel</p>
-          </li>
-          <li className="two">
-            <span>Intermediate</span>
-            <i className="fab fa-js fa-lg"></i>
-            <p>JS</p>
-          </li>
-          <li className="one">
-            <span>Entry</span>
-            <i className="fab fa-envira fa-lg icon-rotate"></i>
-            <p>Mongodb</p>
-          </li>
-          <li className="one">
-            <span>Entry</span>
-            <i className="fab fa-react fa-lg"></i>
-            <p>React</p>
-          </li>
-          <li className="one">
-            <span>Entry</span>
-            <i className="fab fa-node fa-lg "></i>
-            <p>Node</p>
-          </li>
-          <li className="two">
-            <span>Intermediate</span>
-            <i className="fab fa-git fa-lg"></i>
-            <p>git</p>
-          </li>
-          <li className="one">
-            <span>entry</span>
-            <i className="fab fa-java fa-lg"></i>
-            <p>java</p>
-          </li>
-          <li className="one">
-            <span>entry</span>
-            <i className="fas fa-pencil-ruler fa-lg"></i>
-            <p>UI design</p>
-          </li>
-        </ul> */}
+        <ul className={Observer(refAboutDesc) ? "aboutSkills active" : "aboutSkills"}>
+          {skillDetails.map((skillItem, index) => (
+            <SkillItem itemInfo={skillItem} key={index} />
+          ))};
+        </ul>
       </main>
     </section>
   )
