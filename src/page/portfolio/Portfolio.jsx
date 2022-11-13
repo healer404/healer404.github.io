@@ -1,9 +1,13 @@
 import './portfolio.css';
-import Introduction from "./prt.intro";
+import Introduction from '../../components/portfolio/introduction/introduction';
+import AboutMe from '../../components/portfolio/about/about';
 
 const PortfolioPage = () => {
   return (
-    <Introduction />
+    <>
+      <Introduction />
+      <AboutMe />
+    </>
   )
 }
 

@@ -1,0 +1,69 @@
+.introContainer{
+  min-height: 100vh;
+  max-height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.introContainer > .texts{
+  text-align: center;
+  padding: 8vh 0;
+  color: var(--clr-white);
+  letter-spacing: 1px;
+}
+.introContainer > .texts > .greeting{
+  opacity: .8;
+  font-weight: 300;
+  font-size: .9rem;
+}
+.introContainer > .texts > .name{
+  font-size: 2rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  padding: 1.5vh;
+  margin: 0;
+}
+.introContainer > .texts > .position{
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--clr-gray);
+  text-transform: capitalize;
+}
+.introContainer > .buttons{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2vh;
+}
+
+.introContainer.active > .texts > .greeting{
+  animation: slide-in-above 600ms linear 1;
+}
+.introContainer.active > .texts > .name{
+  animation: fade-in 500ms 600ms 1 both;
+}
+.introContainer.active > .texts > .position{
+  animation: slide-in 500ms 1.2s both;
+}
+.introContainer.active > .buttons > a:nth-child(1){
+  animation: fade-in 500ms 2s both;
+}
+.introContainer.active > .buttons > a:nth-child(2){
+  animation: fade-in 500ms 2.5s both;
+}
+@media screen and (min-width: 46.856rem){
+  .introContainer > .texts{
+    padding: 5vh 0;
+  }
+  .introContainer > .texts > .greeting{
+    font-size: 1.1rem;
+  }
+  .introContainer > .texts > .name{
+    font-size: 2.5rem;
+  }
+  .introContainer > .texts > .position{
+    font-size: 1.25rem;
+  }
+}
