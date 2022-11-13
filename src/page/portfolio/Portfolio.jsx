@@ -1,20 +1,10 @@
-import { Component } from "react";
 import './portfolio.css';
+import Introduction from "./prt.intro";
 
-import Intro from "../../components/portfolio/Introduction/Intro";
-import Navbar from "../../components/portfolio/Navbar";
-import AboutMe from "../../components/portfolio/About/About";
-import Projects from "../../components/portfolio/Projects/Projects";
-class PortfolioPage extends Component{
-  render(){
-    return (
-      <>
-        <Intro />
-        <AboutMe />
-        <Projects />
-        <Navbar />
-      </>
-    )
-  }
+const PortfolioPage = () => {
+  return (
+    <Introduction />
+  )
 }
+
 export default PortfolioPage;
