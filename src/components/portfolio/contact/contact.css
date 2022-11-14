@@ -1,88 +1,111 @@
-/***** CONTACT *****/
-.contactContainer{
-  padding: 5vh 5vw;
-}
-.contactContainer > .contactOptions{
-  padding-top: 5vh;
-  display: flex;
-  justify-content: center;
-  place-items: center;
+.contact-container{
+  display: block;
+  position: relative;
+  background-color: var(--clr-darker-red);
+  padding: var(--nrm-padding);
   z-index: 2;
 }
-.contactContainer > .contactOptions > a > span{
-  display: none;
-  padding-left: var(--nrm-padding);
+.contact-texts{
+  padding: 5vw 0 ;
 }
-.contactContainer > .contactOptions > h2{
+.contact-texts > h2{
+  margin: 0;
+  font-weight: bold;
   color: var(--clr-white);
-  opacity: .8;
-  letter-spacing: 1px;
-  font-weight: 500;
-  display: none;
 }
-.contactContainer > .contactOptions > a{
+.contact-texts > span{
+  font-size: .9rem;
   color: var(--clr-gray);
-  text-decoration: none;
-  padding: var(--nrm-padding);
-  animation: slide-in 500ms;
 }
-.contactContainer > .contactOptions > a:hover,
-.contactContainer > .contactOptions > a:active,
-.contactContainer > .contactOptions > a:focus{
+
+.contact-links{
+  display: grid;
+  grid-template-areas: 'one two';
+}
+.contact-links > .links{
+  display: flex;
+  flex-direction: column;
+}
+.contact-links > .links  h4{
+  font-weight: 400;
+  color: var(--clr-red);
+  margin: var(--nrm-padding) 0 var(--nrm-padding) 0;
+}
+.contact-links > .links a{
+  text-decoration: none;
+  color: var(--clr-gray);
+  padding-left: var(--nrm-padding);
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  font-size: .8rem;
+}
+.contact-links > .links a:hover,
+.contact-links > .links a:focus,
+.contact-links > .links a:active{
   color: var(--clr-white);
   transition: var(--transition);
-  cursor: pointer;
 }
-
-.contactContainer.active > .contactOptions{
-  animation: fade-in 1s;
+.contact-links > .links  a > i{
+  display: none;
 }
-
-.contactContainer.active > .contactOptions > a:nth-child(1){
-  animation-delay: 100ms;
-}
-.contactContainer.active > .contactOptions > a:nth-child(2){
-  animation-delay: 300ms;
-}
-.contactContainer.active > .contactOptions > a:nth-child(3){
-  animation-delay: 500ms;
-}
-.contactContainer.active > .contactOptions > a:nth-child(4){
-  animation-delay: 700ms;
-}
-.contactContainer.active > .contactOptions > a:nth-child(5){
-  animation-delay: 900ms;
-}
-
-@media screen and (min-width: 46.856rem){
-  .contactContainer{
-    display: flex;
-    flex-direction: row-reverse;
-    padding: 10vh 20vw;
-  }
-  .contactContainer > .contactOptions{
-    flex: 7;
-    padding: 2.5vh;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-  }
-  .contactContainer > .contactOptions > h2{
-    display: block;
-  }
-  .contactContainer > .contactOptions > a > span{
-    display: initial;
-  }
-}
-
-.footer{
-  padding: var(--nrm-padding);
+.contact-links > .links > .cv-button{ 
   text-align: center;
-  background-color: var(--clr-darker-red);
-  color: var(--clr-gray);
+  padding: var(--nrm-padding);
+  color: var(--clr-white);
 }
-.footer > span{
-  font-size: .8rem;
+
+.contact-container > .footer{
+  text-align: center;
+  padding-top: 5vh;
+}
+.contact-container > .footer > span{
+  font-size: .75rem;
   letter-spacing: 1px;
-  font-weight: 400;
+  color: var(--clr-gray);
+  text-transform: capitalize;
+}
+
+.contact-texts.active > h2{
+  animation: slide-in 1s;
+}
+.contact-texts.active > span{
+  animation: fade-in 2s;
+}
+.contact-links > .links:nth-child(1).active > h4{
+  animation: slide-in 2.3s;
+}
+.contact-links > .links:nth-child(2).active > h4{
+  animation: slide-in 2.6s;
+}
+.contact-links > .links:nth-child(3).active > h4{
+  animation: slide-in 2.9s;
+}
+.contact-links > .links:nth-child(4).active > h4{
+  animation: slide-in 3.2s;
+}
+
+.contact-links > .links:nth-child(1).active > a{
+  animation: fade-in 2.3s;
+}
+.contact-links > .links:nth-child(2).active > a{
+  animation: fade-in 2.6s;
+}
+.contact-links > .links:nth-child(3).active > a{
+  animation: fade-in 2.9s;
+}
+.contact-links > .links:nth-child(4).active > a{
+  animation: fade-in 3.2s;
+}
+
+@media screen and (min-width: 46.856rem) {
+  .contact-container{
+    padding: 2vh 10vw;
+  }
+  .contact-texts{
+    padding: 5vh 0;
+  }
+  .contact-links{
+    display: flex;
+    gap: 5vw;
+  }
 }
