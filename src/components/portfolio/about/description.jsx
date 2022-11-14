@@ -3,7 +3,7 @@ const Description = (props) => {
   return (
     <article className={`aboutDescription ${isInView ? "active" : ""}`}>
       <picture>
-        <img src="https://avatars.githubusercontent.com/u/47404070?v=4" alt="Roniel Duka Photo" loading="lazy"/>
+        <img src="https://avatars.githubusercontent.com/u/47404070?v=4" alt="Roniel Duka" loading="lazy"/>
       </picture>
       <div className="description">
         <span>Who am I?</span>

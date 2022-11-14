@@ -5,7 +5,7 @@ const SkillItem = (props) => {
 
   let typeClass;
   let typeText;
-  if(type == 1){
+  if(type === 1){
     typeClass = 'one';
     typeText = 'Entry';
   } else {
