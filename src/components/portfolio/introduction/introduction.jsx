@@ -1,5 +1,4 @@
 import { useRef } from "react";
-import {Link} from 'react-router-dom';
 import Observer from "../../../hooks/observer";
 
 import './introduction.css';
@@ -19,12 +18,12 @@ const Introduction = () => {
           <span className="position">Junior developer</span>
         </div>
         <div className="buttons">
-          <Link to={'/'} className="btn-primary" target="_blank" rel="noreferrer">
+          <a href="/assets/portfolio/RONIEL_L_DUKA_CV.pdf" className="btn-primary" target="_blank" rel="noreferrer">
             Download CV
-          </Link>
-          <Link to={'/'} className="btn-secondary" target="_blank" rel="noreferrer">
+          </a>
+          <a href="#contact" className="btn-secondary">
             Let's Talk
-          </Link>
+          </a>
         </div>
       </main>
     </section>

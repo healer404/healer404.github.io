@@ -15,7 +15,7 @@ const Contact = () => {
       label: 'Viber'
     },
     {
-      link: 'viber://chat?number=639677153243',
+      link: 'https://t.me/dukaroniel',
       icon: 'fab fa-telegram',
       label: 'Telegram'
     },
@@ -65,7 +65,7 @@ const Contact = () => {
 
           <div className={`links ${Observer(refCV) ? "active" : ""}`} ref={refCV}>
             <h4>Resume</h4>
-            <a href='#introduction' className='btn-secondary cv-button' target="_blank" rel='noreferrer'>Download CV</a>
+            <a href='/assets/portfolio/RONIEL_L_DUKA_CV.pdf' className='btn-secondary cv-button' target="_blank" rel='noreferrer'>Download CV</a>
           </div>
         </div>
 

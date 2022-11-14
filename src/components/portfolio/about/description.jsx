@@ -1,9 +1,7 @@
-import { Link } from "react-router-dom";
-
 const Description = (props) => {
   const isInView = props.isInView;
   return (
-    <article className={`aboutDescription ${isInView ? " active" : ""}`}>
+    <article className={`aboutDescription ${isInView ? "active" : ""}`}>
       <picture>
         <img src="https://avatars.githubusercontent.com/u/47404070?v=4" alt="Roniel Duka Photo" loading="lazy"/>
       </picture>
@@ -15,13 +13,14 @@ const Description = (props) => {
           dynamic user interfaces.</p>
         <ul>
           <li>
-            <Link href="/"><i className="fab fa-facebook fa-lg"></i></Link>
+            <a href="https://www.facebook.com/duka.roniel">
+              <i className="fab fa-facebook fa-lg"></i>
+            </a>
           </li>
           <li>
-            <Link href="/"><i className="fab fa-twitter fa-lg"></i></Link>
-          </li>
-          <li>
-            <Link href="/"><i className="fab fa-linkedin fa-lg"></i></Link>
+            <a href="https://www.linkedin.com/in/roniel-duka-89aa30166/">
+              <i className="fab fa-linkedin fa-lg"></i>
+            </a>
           </li>
         </ul>   
       </div>

@@ -14,7 +14,7 @@ const Navbar = () => {
         <i className="fas fa-user"></i> 
         <span>About Me</span>
       </a>
-      <a href="/" className="item brand">
+      <a href="/" className="item brand" target="_self" rel="noreferrer">
         <img src="./assets/happs.png" alt="happs" />
         <span>Home</span>
       </a>
