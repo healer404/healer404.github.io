@@ -1,11 +1,11 @@
 import {useEffect, useState} from 'react';
 
-const RefObserver = (ref) =>{
-  const [sectionHeader, setSectionHeader] = useState(false);
+const Observer = (ref) =>{
+  const [element, setElement] = useState(false);
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-          if(entry.isIntersecting){ setSectionHeader(true); }
+          if(entry.isIntersecting){ setElement(true); }
       },{
         root: null,
         rootMargin: "0px",
@@ -17,6 +17,6 @@ const RefObserver = (ref) =>{
     }
   }, [ref]);
 
-  return sectionHeader;
+  return element;
 }
-export default RefObserver;
+export default Observer;

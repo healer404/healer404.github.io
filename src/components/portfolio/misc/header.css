@@ -1,0 +1,63 @@
+/***** HEADER *****/
+.PRTFheader{
+  padding-top: var(--nrm-padding);
+  display: grid;
+  place-items: center;  
+  height: 60px;
+  letter-spacing: 1px;
+}
+.PRTFheader > p{
+  display: inline;
+  margin: 0px;
+  padding: 0px;
+  font-size: 18pt;
+  color: var(--clr-white);
+  font-weight: bold;
+  text-transform: capitalize;
+  z-index: 2;
+}
+.PRTFheader > span{
+  font-size: 9pt;
+  font-weight: 500;
+  color: var(--clr-gray);
+  z-index: 3;
+}
+.PRTFheader > .boxes{
+  height: 0;
+  position: relative;
+  top: 30px;
+  display: flex;
+  align-items: center;
+}
+.PRTFheader .box{
+  border: 2px solid rgba(255, 0, 0, 0.3);
+  height: 40px;
+  width: 40px;
+  transform: rotate(45deg);
+  z-index: 0;
+}
+.PRTFheader .box.left,
+.PRTFheader .box.right{
+  height: 30px;
+  width: 30px;
+}
+.PRTFheader .box.left{
+  position: relative;
+  left: 30px;
+}
+.PRTFheader .box.right{
+  position: relative;
+  right: 30px;
+}
+.PRTFheader > .boxes.active > .box{
+  transform: rotate(135deg);
+  transition: var(--transition);
+}
+.PRTFheader > .boxes.active > .box.left{
+  left: 0;
+  transition: var(--transition);
+}
+.PRTFheader > .boxes.active > .box.right{
+  right: 0;
+  transition: var(--transition);
+}

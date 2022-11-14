@@ -1,11 +1,13 @@
 import { useRef } from "react";
-import RefObserver from "./inc.observer";
+import Observer from "../../../hooks/observer";
+
+import './introduction.css';
 
 const Introduction = () => {
   const refIntro = useRef(null);
   return (
     <section className="PRTFsection" ref={refIntro} id="introduction">
-      <main className={RefObserver(refIntro) ? "introContainer active" : "introContainer"}>
+      <main className={`introContainer ${Observer(refIntro) ? "active" : ""}`}>
         <div className="texts">
           <span className="greeting">
             Hello, my name is
@@ -16,10 +18,10 @@ const Introduction = () => {
           <span className="position">Junior developer</span>
         </div>
         <div className="buttons">
-          <a href="" className="btn-primary" target="_blank" rel="noreferrer">
+          <a href="/assets/portfolio/RONIEL_L_DUKA_CV.pdf" className="btn-primary" target="_blank" rel="noreferrer">
             Download CV
           </a>
-          <a href="" className="btn-secondary" target="_blank" rel="noreferrer">
+          <a href="#contact" className="btn-secondary">
             Let's Talk
           </a>
         </div>

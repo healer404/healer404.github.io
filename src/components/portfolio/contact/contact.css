@@ -1,0 +1,111 @@
+.contact-container{
+  display: block;
+  position: relative;
+  background-color: var(--clr-darker-red);
+  padding: var(--nrm-padding);
+  z-index: 2;
+}
+.contact-texts{
+  padding: 5vw 0 ;
+}
+.contact-texts > h2{
+  margin: 0;
+  font-weight: bold;
+  color: var(--clr-white);
+}
+.contact-texts > span{
+  font-size: .9rem;
+  color: var(--clr-gray);
+}
+
+.contact-links{
+  display: grid;
+  grid-template-areas: 'one two';
+}
+.contact-links > .links{
+  display: flex;
+  flex-direction: column;
+}
+.contact-links > .links  h4{
+  font-weight: 400;
+  color: var(--clr-red);
+  margin: var(--nrm-padding) 0 var(--nrm-padding) 0;
+}
+.contact-links > .links a{
+  text-decoration: none;
+  color: var(--clr-gray);
+  padding-left: var(--nrm-padding);
+  line-height: 1.5rem;
+  letter-spacing: 1px;
+  font-size: .8rem;
+}
+.contact-links > .links a:hover,
+.contact-links > .links a:focus,
+.contact-links > .links a:active{
+  color: var(--clr-white);
+  transition: var(--transition);
+}
+.contact-links > .links  a > i{
+  display: none;
+}
+.contact-links > .links > .cv-button{ 
+  text-align: center;
+  padding: var(--nrm-padding);
+  color: var(--clr-white);
+}
+
+.contact-container > .footer{
+  text-align: center;
+  padding-top: 5vh;
+}
+.contact-container > .footer > span{
+  font-size: .75rem;
+  letter-spacing: 1px;
+  color: var(--clr-gray);
+  text-transform: capitalize;
+}
+
+.contact-texts.active > h2{
+  animation: slide-in 1s;
+}
+.contact-texts.active > span{
+  animation: fade-in 2s;
+}
+.contact-links > .links:nth-child(1).active > h4{
+  animation: slide-in 1.3s;
+}
+.contact-links > .links:nth-child(2).active > h4{
+  animation: slide-in 1.6s;
+}
+.contact-links > .links:nth-child(3).active > h4{
+  animation: slide-in 1.9s;
+}
+.contact-links > .links:nth-child(4).active > h4{
+  animation: slide-in 2.2s;
+}
+
+.contact-links > .links:nth-child(1).active > a{
+  animation: fade-in 1.3s;
+}
+.contact-links > .links:nth-child(2).active > a{
+  animation: fade-in 1.6s;
+}
+.contact-links > .links:nth-child(3).active > a{
+  animation: fade-in 1.9s;
+}
+.contact-links > .links:nth-child(4).active > a{
+  animation: fade-in 2.2s;
+}
+
+@media screen and (min-width: 46.856rem) {
+  .contact-container{
+    padding: 2vh 10vw;
+  }
+  .contact-texts{
+    padding: 5vh 0;
+  }
+  .contact-links{
+    display: flex;
+    gap: 5vw;
+  }
+}

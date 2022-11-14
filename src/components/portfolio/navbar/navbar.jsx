@@ -1,10 +1,11 @@
 import { useRef } from "react";
-import RefObserver from "./inc.observer";
+import Observer from '../../../hooks/observer';
+import './navbar.css';
 
 const Navbar = () => {
   const refNavbar = useRef(null);
   return (
-    <nav className={RefObserver(refNavbar) ? "PRTFnavbar active" : "PRTFnavbar"} ref={refNavbar}>
+    <nav className={`PRTFnavbar ${Observer(refNavbar) ? "active" : ""}`} ref={refNavbar}>
       <a href="#introduction" className="item">
         <i className="fas fa-file"></i>
         <span>Resume</span>
@@ -13,7 +14,7 @@ const Navbar = () => {
         <i className="fas fa-user"></i> 
         <span>About Me</span>
       </a>
-      <a href="/" className="item brand">
+      <a href="/" className="item brand" target="_self" rel="noreferrer">
         <img src="./assets/happs.png" alt="happs" />
         <span>Home</span>
       </a>

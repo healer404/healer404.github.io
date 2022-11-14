@@ -1,0 +1,97 @@
+/***** NAVBAR *****/
+.PRTFnavbar{
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  height: 60px;
+  width: 100vw;
+  background-color: var(--clr-dark-red);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  border-top: 2px solid rgb(255, 0,0,.3);
+  z-index:9;
+}
+.PRTFnavbar > .item{
+  text-decoration: none;
+  color: var(--clr-default);
+  display: grid;
+  place-items: center;
+  opacity: .8;
+}
+.PRTFnavbar > .item > img{
+  height: 40px;
+  width: 40px;
+}
+.PRTFnavbar > .item > span{
+  padding-top: 3px;
+  font-size: 7pt;
+}
+.PRTFnavbar > .item.brand > span{
+  display: none;
+}
+.PRTFnavbar > .item:hover,
+.PRTFnavbar > .item:focus{
+  opacity: 1;
+  color: var(--clr-white);
+  transition: var(--transition);
+}
+.PRTFnavbar > .item.brand:hover > img,
+.PRTFnavbar > .item.brand:focus > img{
+  animation: brand-shake 400ms;
+}
+@keyframes brand-shake {
+  0%{
+    transform: rotate(0);
+  }
+  30%{
+    transform: rotate(5deg);
+  }
+  60%{
+    transform: rotate(0deg);
+  }
+  90%{
+    transform: rotate(-5deg);
+  }
+  100%{
+    transform: rotate(0);
+  }
+}
+@media screen and (min-width: 46.856rem) {
+  .PRTFnavbar{
+    position: relative;
+    bottom: unset;
+    left: unset;
+    justify-content: left;
+    padding: 0 5vw;
+    gap: 2vw;
+    border-bottom: 2px solid rgb(255, 0,0,.3);
+    box-shadow: 0px 1px 1px 1px rgba(55, 10, 10, 0.25);
+    width: auto;
+  }
+  .PRTFnavbar > .item > i{
+    display: none;
+  }
+  .PRTFnavbar > .item.brand{
+    display: flex;
+    gap: 1vw;
+    order: -1;
+  }
+  .PRTFnavbar > .item:nth-child(1){
+    order: 4;
+  }
+  .PRTFnavbar > .item:nth-child(4){
+    order: 3;
+  }
+  .PRTFnavbar > .item.brand > span{
+    display: initial;
+  }
+  .PRTFnavbar > .item > span{
+    font-size: 1rem;
+  }
+  .PRTFnavbar.active{   
+    position: sticky; 
+    top: 0;
+    left: 0;
+  }
+}
