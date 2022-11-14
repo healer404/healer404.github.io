@@ -21,6 +21,7 @@
 .contact-links{
   display: grid;
   grid-template-areas: 'one two';
+  gap: 2vw;
 }
 .contact-links > .links{
   display: flex;
@@ -57,6 +58,7 @@
 .contact-container > .footer{
   text-align: center;
   padding-top: 5vh;
+  padding-bottom: 8vh;
 }
 .contact-container > .footer > span{
   font-size: .75rem;
@@ -107,5 +109,8 @@
   .contact-links{
     display: flex;
     gap: 5vw;
+  }
+  .contact-container > .footer{
+    padding-bottom: var(--nrm-padding);
   }
 }
