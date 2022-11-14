@@ -72,29 +72,29 @@
   animation: fade-in 2s;
 }
 .contact-links > .links:nth-child(1).active > h4{
-  animation: slide-in 2.3s;
+  animation: slide-in 1.3s;
 }
 .contact-links > .links:nth-child(2).active > h4{
-  animation: slide-in 2.6s;
+  animation: slide-in 1.6s;
 }
 .contact-links > .links:nth-child(3).active > h4{
-  animation: slide-in 2.9s;
+  animation: slide-in 1.9s;
 }
 .contact-links > .links:nth-child(4).active > h4{
-  animation: slide-in 3.2s;
+  animation: slide-in 2.2s;
 }
 
 .contact-links > .links:nth-child(1).active > a{
-  animation: fade-in 2.3s;
+  animation: fade-in 1.3s;
 }
 .contact-links > .links:nth-child(2).active > a{
-  animation: fade-in 2.6s;
+  animation: fade-in 1.6s;
 }
 .contact-links > .links:nth-child(3).active > a{
-  animation: fade-in 2.9s;
+  animation: fade-in 1.9s;
 }
 .contact-links > .links:nth-child(4).active > a{
-  animation: fade-in 3.2s;
+  animation: fade-in 2.2s;
 }
 
 @media screen and (min-width: 46.856rem) {
