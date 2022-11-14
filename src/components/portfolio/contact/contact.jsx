@@ -31,8 +31,8 @@ const Contact = () => {
     }
   ];
   return (
-    <section className="PRTFsection">
-      <main className="contact-container ">
+    <section className="PRTFsection" id='contact'>
+      <main className="contact-container">
         <header className={`contact-texts ${Observer(refContact) ? "active" : ""}`} ref={refContact}>
           <h2>Get in touch</h2>
           <span>Let's create something new!</span>

@@ -1,3 +1,4 @@
+import './header.css';
 const SectionHeader = (props) => {
   const title = props.header.title;
   const subtitle = props.header.subtitle;
