@@ -81,7 +81,7 @@ const AboutMe = () => {
       label: 'react'
     },
     {
-      type: 2,
+      type: 1,
       icon: 'fab fa-node',
       label: 'node'
     },
